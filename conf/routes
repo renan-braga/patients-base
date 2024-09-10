@@ -1,0 +1,9 @@
+# Routes for serving static assets
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+GET     /patients              controllers.PatientController.listPatients
+GET     /patients/:id          controllers.PatientController.getPatient(id: Long)
+POST    /patients              controllers.PatientController.createPatient
+PUT     /patients/:id          controllers.PatientController.updatePatient(id: Long)
+DELETE  /patients/:id          controllers.PatientController.deletePatient(id: Long)
